@@ -1,0 +1,189 @@
+body {
+    background-color: #5685ab;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+
+/* Styles for index.html */
+#content {
+    width: 90%;
+    margin: auto;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#converter {
+    width: 50%;
+    margin:auto
+}
+
+#converter > form {
+    width:300px;
+    margin:auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 10px 1px white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+select {
+    padding:10px;
+    border-radius: 6px;
+}
+
+#typeInput {
+    padding: 10px;
+    border-radius: 6px;
+    width: 110px;
+    margin-left: 10px;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+#input {
+    display: flex;
+    margin-bottom:20px;
+    justify-content: space-around;
+}
+
+#currencyInput {
+    width:130px;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+#arrow {
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+#output {
+    display: flex;
+    margin-bottom:20px;
+    justify-content: space-around;
+}
+
+#currencyOutput {
+    width:130px;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+#result {
+    background-color: white;
+    border: black 2px solid;
+    padding: 10px;
+    border-radius: 6px;
+    width: 110px;
+    margin-left: 10px;
+}
+
+#submitButton {
+    width: 80px;
+    margin:auto;   
+    
+}
+#submitButton > input {
+    background-color: black;
+    text-decoration: none;
+    border: black 2px solid;
+    padding:10px;
+    border-radius: 20px;
+    color:#5685ab;
+    width:80px;
+    text-align: center;
+    
+}
+
+input {
+    font-family: 'Comfortaa', sans-serif;
+    padding:5px;
+    border-radius:10px;
+}
+
+
+/* Styles for history.html */
+#data {
+    width: 50%;
+    margin:auto;
+    margin-top:100px;
+}
+
+#defaultMessage {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#historyTable  {
+    width:90%;
+    margin:auto;
+    margin-top: 10px;
+    padding: 20px;
+    
+    
+}
+
+#conversionHistory {
+    text-align: center;
+}
+#conversionData {
+    width: 600px;
+    margin: auto;
+    margin-top:50px;
+    text-align:center;
+    table-layout: auto;
+    box-shadow: 0px 0px 10px 1px white;
+    border-radius: 20px;
+    padding: 10px;
+    padding-top:50px;
+    height:300px;
+    overflow-y: scroll;
+    
+}
+
+#tableHeading > th {
+    text-align: center;
+}
+
+td { 
+    padding:5px
+}
+.hidden {
+    display:none
+}
+
+.link {
+    width:300px;
+    margin:auto;
+    margin-top:40px;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:100px;
+}
+a {
+    text-decoration: none;
+    border: black 2px solid;
+    padding:10px;
+    border-radius: 20px;
+    color:black;
+    width:80px;
+    text-align: center;
+}
+
+button {
+    background-color: black;
+    text-decoration: none;
+    border: black 2px solid;
+    padding:10px;
+    border-radius: 20px;
+    color:#5685ab;
+    width:80px;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+}
+

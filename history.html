@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body onload="myLoad()">
+    <div class="link">
+        <a href="index.html">HOME</a>
+        <a href="history.html">HISTORY</a>
+    </div>
+    
+    <div id="data">
+
+        <h2 id="conversionHistory">Conversion History</h2>
+
+        <div id="defaultMessage">No data avaliable</div>
+
+        <div id="conversionData">
+            <div>
+                <label>From</label>
+                <input id="dateFrom" type="text" placeholder="YYYY/MM/DD">
+                <label>To</label>
+                <input id="dateTo" type="text" placeholder="YYYY/MM/DD">
+                <button type="submit" onclick="filter()">Filter</button>
+            </div>
+            <table id="historyTable">
+                <tr id="tableHeading">
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+        
+        
+    </div>
+    <script type=text/javascript src="currencyConverter.js"></script>
+</body>
+</html>
