@@ -116,77 +116,20 @@ function convert() {
         return result.innerHTML = "Invalid Entry";
     }
 
-    else if(currencyInput === "GBP") {
-        if (currencyOutput === "GBP") {
-            result.innerHTML = parseFloat(currencyValue).toFixed(2)
-        }
-        else if (currencyOutput === "EUR") {
-            total = currencyValue*1.15
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-        else if (currencyOutput === "USD") {
-            total = currencyValue*1.23
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-        else if (currencyOutput === "AUD") {
-            total = currencyValue*1.90
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-    }
 
-    else if(currencyInput === "EUR") {
-        if (currencyOutput === "EUR") {
-            result.innerHTML = parseFloat(currencyValue).toFixed(2)
-        }
-        else if (currencyOutput === "GBP") {
-            total = currencyValue*0.87
+    // Fetch currency conversion rates from API https://app.exchangerate-api.com/
+   else {
+    fetch(`https://v6.exchangerate-api.com/v6/fba3e87bb0ef3710b1bf59c1/latest/${currencyInput}`)
+         .then(response => {
+               return response.json();
+         })
+         .then(data => {
+            let rate = data.conversion_rates[currencyOutput];
+            let total = rate * currencyValue;
             result.innerHTML = parseFloat(total).toFixed(2)
-        }
-        else if (currencyOutput === "USD") {
-            total = currencyValue*1.07
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-        else if (currencyOutput === "AUD") {
-            total = currencyValue*1.65
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-    }
-
-    else if(currencyInput === "USD") {
-        if (currencyOutput === "USD") {
-            result.innerHTML = parseFloat(currencyValue).toFixed(2)
-        }
-        else if (currencyOutput === "GBP") {
-            total = currencyValue*0.81
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-        else if (currencyOutput === "EUR") {
-            total = currencyValue*0.93
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-        else if (currencyOutput === "AUD") {
-            total = currencyValue*1.54
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-    }
-
-    else if(currencyInput === "AUD") {
-        if (currencyOutput === "AUD") {
-            result.innerHTML = parseFloat(currencyValue).toFixed(2)
-        }
-        else if (currencyOutput === "GBP") {
-            total = currencyValue*0.53
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-        else if (currencyOutput === "EUR") {
-            total = currencyValue*0.61
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-        else if (currencyOutput === "USD") {
-            total = currencyValue*0.65
-            result.innerHTML = parseFloat(total).toFixed(2)
-        }
-    }
+         });
+   }
+    
 
     // Add object of new data to conversions array
     conversions = JSON.parse(sessionStorage.getItem("new"));

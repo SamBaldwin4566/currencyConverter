@@ -6,7 +6,7 @@ body {
 
 /* Styles for index.html */
 #content {
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top:100px;
     margin-bottom:100px;
@@ -17,18 +17,28 @@ h1 {
 }
 
 #converter {
-    width: 50%;
-    margin:auto
+    width: 40%;
+    margin:auto;
+    
+}
+
+@media screen and (max-width: 800px) {
+    #converter {
+        width: 90%;
+        
+        margin:auto
+    }
 }
 
 #converter > form {
-    width:300px;
+    width:100%;
     margin:auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     box-shadow: 0px 0px 10px 1px white;
     border-radius: 20px;
-    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 select {
@@ -109,7 +119,7 @@ input {
 
 /* Styles for history.html */
 #data {
-    width: 50%;
+    width: 100%;
     margin:auto;
     margin-top:100px;
 }
@@ -132,7 +142,7 @@ input {
     text-align: center;
 }
 #conversionData {
-    width: 600px;
+    width: 50%;
     margin: auto;
     margin-top:50px;
     text-align:center;
@@ -144,6 +154,17 @@ input {
     height:300px;
     overflow-y: scroll;
     
+}
+@media screen and (max-width: 800px) {
+    #conversionData {
+        width: 90%;
+        
+        margin:auto
+    }
+}
+#filter{
+    border: red solid 2px;
+    width:100%;
 }
 
 #tableHeading > th {
